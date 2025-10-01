@@ -1,0 +1,46 @@
+spring:
+  profiles:
+    active: uat
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///btspbms716db
+    username: root
+    password: fw18_0433
+    type: org.apache.commons.dbcp2.BasicDataSource
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: fw18_0433
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///btspbms716db
+    username: root
+    password: fw18_0433
+    type: com.mchange.v2.c3p0.ComboPooledDataSource 
+---
+spring:
+  config:
+    activate:
+      on-profile: uat
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: fw18_0433
+    type: oracle.ucp.jdbc.PoolDataSource
