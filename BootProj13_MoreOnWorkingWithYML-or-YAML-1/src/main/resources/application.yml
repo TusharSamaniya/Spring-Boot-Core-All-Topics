@@ -1,0 +1,30 @@
+# employees info
+emp:
+  details:
+    eno: 1001
+    ename: raja
+    eaddr: hyd
+    favColors:
+      - red
+      - blue
+      - green
+    # for list collection
+    nickNames:
+      - bunny
+      - chunny
+      - tommy
+    # for set collection
+    phoneNumbers:
+      - 99999
+      - 88888
+      - 77777
+    # for map collection
+    idDetails:
+      aadhar: 857496
+      voterid: 415263
+      panNo: 1425369
+    project:
+      pid: 3657
+      pname: openFx
+      paddr: mumbai
+      size: 100
